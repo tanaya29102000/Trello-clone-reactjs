@@ -10,6 +10,10 @@ import Resources from './pages/Resources';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import HeroSection from './components/HeroSection';
+import Sidebar from './assets/Sidebar';
+import Header from './assets/Header';
+import TemplateGallery from './assets/TemplateGallery';
+import JiraSection from './assets/JiraSection';
 
 function App() {
   return (
@@ -23,7 +27,13 @@ function App() {
         <Route path="/resources" element={<Resources />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/sidebar" element={<Sidebar />} />
+        <Route path="/header" element={<Header />} />
+        <Route path="/templategallery" element={<TemplateGallery />} />
+        <Route path="/jirasection" element={<JiraSection />} />
         <Route path="/herosection" element={<HeroSection />} />
+
+
       </Routes>
     </Router>
   );

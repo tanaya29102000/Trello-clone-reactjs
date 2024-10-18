@@ -1,0 +1,15 @@
+/* src/components/TemplateGallery.css */
+.template-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.template-card {
+    background-color: #e6f2ff;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 200px; /* Flexible width */
+    text-align: center;
+}

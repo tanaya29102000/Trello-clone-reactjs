@@ -1,0 +1,170 @@
+/* Global Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Keeps header on top during scroll */
+}
+
+/* Left Section of Header */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Grid Icon */
+.grid-icon {
+    font-size: 22px;
+    color: #5e6c84;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.grid-icon:hover {
+    color: #0079bf;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #172b4d;
+    margin-right: 30px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5e6c84;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0079bf;
+}
+
+.dropdown-icon {
+    font-size: 10px;
+    margin-left: 5px;
+    color: #5e6c84;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Right Section of Header */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Add Button */
+.add-button {
+    background-color: #0079bf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #005f9e;
+}
+
+/* Search Input */
+.search-input {
+    padding: 8px 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+    outline: none;
+    width: 220px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #0079bf;
+}
+
+/* Icons Styling */
+.icon {
+    font-size: 20px;
+    color: #5e6c84;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #0079bf;
+}
+
+/* Profile Icon (Circular Initials) */
+.profile-icon {
+    background-color: #172b4d;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-icon:hover {
+    background-color: #005f9e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navigation links on smaller screens */
+    }
+
+    .search-input {
+        width: 150px; /* Adjust input size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column; /* Stack header items vertically */
+        padding: 15px;
+    }
+
+    .header-left,
+    .header-right {
+        width: 100%; /* Full width for sections */
+        justify-content: space-between;
+    }
+
+    .search-input {
+        width: 100%; /* Full width for search input */
+        margin-bottom: 10px;
+    }
+}

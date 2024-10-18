@@ -14,7 +14,7 @@ function Login() {
     try {
       const { data } = await axios.post('http://localhost:5000/api/users/login', { email, password });
       localStorage.setItem('token', data.token); // Save the token
-      navigate('/'); // Redirect to Home page
+      navigate('/Header'); // Redirect to Home page
     } catch (error) {
       alert(error.response?.data || 'Invalid login credentials');
     }
