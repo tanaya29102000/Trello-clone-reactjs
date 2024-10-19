@@ -105,17 +105,62 @@
 
 /* Task Section styles */
 .task-section {
-  padding: 50px 5%;
-  background-color: #ffffff; /* White background for contrast */
+  padding: 2rem; /* Space around the task section */
+  background-color: #f4f5f7; /* Light background to mimic Trello */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .task-content {
-  display: flex; /* Use flexbox to align items */
-  justify-content: space-between; /* Space items evenly */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 1.5rem; /* Space between task items */
 }
 
 .task-items {
-  flex: 1; /* Takes up one part of the flex container */
+  display: flex;
+  gap: 1rem; /* Space between task items */
+}
+
+.task-item {
+  background-color: white; /* Card background color */
+  border: 1px solid #ddd; /* Light border for the card */
+  border-radius: 8px; /* Rounded corners for the card */
+  padding: 1rem; /* Padding inside the card */
+  flex: 1; /* Allow cards to grow equally */
+  transition: border-color 0.3s, background-color 0.3s; /* Smooth transition */
+  cursor: pointer; /* Pointer cursor for interactive items */
+}
+.center-align {
+  text-align: center; /* Center aligns the text */
+}
+
+.bold-text {
+  font-weight: bold;  /* Makes the second line bold */
+}
+
+/* Hover effect */
+.task-item:hover {
+  background-color: #e6f7ff; /* Light blue background on hover */
+  border-color: #0079bf; /* Change border color on hover */
+}
+
+/* Active task item styling */
+.task-item.active {
+  background-color: skyblue; /* Active background color */
+  border-color: #0079bf; /* Active border color */
+}
+
+/* Task image styling */
+.task-image-content {
+  margin-top: 1.5rem; /* Space above the task image */
+  text-align: center; /* Center the image */
+}
+
+.task-image-content img {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
 }
 
 /* Card Styles */
@@ -151,6 +196,75 @@
   border-radius: 8px; /* Rounded corners for images */
 }
 
+/* Pricing.css */
+
+.pricing-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: space-around; /* Space around each card for equal spacing */
+  flex-wrap: nowrap; /* Prevent wrapping to keep them in one row */
+  margin-top: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling if needed on small screens */
+}
+
+.pricing-card {
+  background-color: #f8f9fa; /* Light background for cards */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  width: 250px; /* Set a fixed width for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.pricing-card:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.price {
+  font-size: 24px; /* Larger font size for price */
+  font-weight: bold;
+  color: #007bff; /* Primary color for price */
+}
+
+.estimated-cost {
+  margin-top: 30px;
+  font-size: 18px; /* Slightly larger font for estimated cost */
+}
+/* Add these styles to Pricing.css */
+
+.team-join-section {
+  margin-top: 40px; /* Space above the section */
+  text-align: center; /* Center-align text */
+}
+
+.company-logos {
+  display: flex;
+  justify-content: center; /* Center the logos */
+  flex-wrap: wrap; /* Allow logos to wrap if the screen is small */
+  gap: 20px; /* Space between logos */
+  margin-top: 10px; /* Space above logos */
+}
+
+.company-logos img {
+  height: 50px; /* Set a consistent height for logos */
+  max-width: 100%; /* Ensure logos are responsive */
+}
+
+
+/* Optional: Adjust for smaller screens */
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center the cards when wrapping */
+  }
+}
+
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .hero-container {
@@ -182,5 +296,312 @@
 
   .task-image-content {
     margin-left: 0; /* Remove margin on smaller screens */
+  }
+}
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.action-cards-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-cards {
+  display: flex;
+  overflow: hidden;
+  width: 80%;
+}
+
+.action-card {
+  min-width: 30%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.swap-button {
+  background-color: #1a9ae4;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.image-paragraph-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Adjust spacing between blocks */
+  padding: 2rem;
+}
+
+.content-block {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.content-block img {
+  width: 50%; /* Adjust size of the images */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.content-block h1 {
+  flex: 1; /* Paragraph takes up remaining space */
+  font-size: 1.5rem; /* Adjust font size */
+  line-height: 1.8;
+  color: #333; /* Darker color for readability */
+}
+
+.content-block.reverse {
+  flex-direction: row-reverse; /* Reverse layout for the second block */
+}
+
+@media (max-width: 768px) {
+  .content-block {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .content-block.reverse {
+    flex-direction: column; /* Maintain column stacking for the reversed block */
+  }
+
+  .content-block img {
+    width: 100%; /* Ensure images are responsive */
+  }
+}
+
+/* Horizontal alignment using flexbox */
+/* Horizontal alignment using flexbox */
+.horizontal-content {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Align content vertically */
+  gap: 1rem; /* Add space between text and button */
+  padding: 2rem; /* Optional padding */
+  min-height: 10vh; /* Full height */
+  text-align: left; /* Align paragraph text to the left */
+  margin: 1rem 2rem; /* Reduce top and bottom margin, keep left/right */
+}
+
+/* Paragraph styling */
+.horizontal-content p {
+  max-width: 500px; /* Optional: limit the width for readability */
+  line-height: 1.6; /* Improve readability */
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0; /* Remove default margin */
+}
+
+/* Button styling */
+button[type="btn1"] {
+  background-color: #0079bf;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="btn1"]:hover {
+  background-color: #005a8c;
+}
+
+.final-section {
+  background-color: rgb(49, 165, 227);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+.features-row {
+  display: flex;
+  justify-content: space-around; /* Space between each item */
+  align-items: center; /* Align items vertically */
+  padding: 20px;
+  gap: 20px; /* Adjust spacing between items */
+}
+
+.feature-item {
+  flex: 1; /* Make all items take equal space */
+  max-width: 300px; /* Optional: control the max width of each card */
+  text-align: center;
+  background-color: #f9f9f9; /* Light background for each item */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feature-item img {
+  width: 100%; /* Make images responsive */
+  height: auto;
+  max-height: 150px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.feature-item p {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.btn1 {
+  background-color: #0079bf;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn1:hover {
+  background-color: #005f8c;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px); /* Add a slight hover effect */
+}
+.footer {
+  background-color: #000; /* Black background color */
+  color: #fff; /* White text color for contrast */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+  padding-bottom: 20px;
+  border-bottom: 1px solid #350745; /* Optional: Divider line */
+}
+
+.footer-section {
+  flex: 1;
+  max-width: 200px;
+  margin: 10px;
+  text-align: left;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Make it responsive */
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.language-selector {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/*footer*/
+.footer {
+  background-color: #08324f; /* Black background color */
+  color: #fff; /* White text color for contrast */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+  padding-bottom: 20px;
+  border-bottom: 1px solid #444; /* Optional: Divider line */
+}
+
+.footer-section {
+  flex: 1;
+  max-width: 200px;
+  margin: 10px;
+  text-align: left;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Make it responsive */
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.language-selector {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
   }
 }

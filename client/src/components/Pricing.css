@@ -1,0 +1,129 @@
+/* Overall container styling */
+.pricing-container {
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    text-align: center; /* Center-align text */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header styling */
+.pricing-header h1 {
+    font-size: 2.5em; /* Large font size for the header */
+    margin-bottom: 10px; /* Space below the header */
+    color: #333; /* Dark text color */
+}
+
+.pricing-header p {
+    font-size: 1.2em; /* Slightly larger font for subtext */
+    color: #666; /* Medium gray color */
+    margin-bottom: 40px; /* Space below the paragraph */
+}
+
+/* Individual pricing plan styling */
+.pricing-plan {
+    background-color: #fff; /* White background for each plan */
+    border: 1px solid #ddd; /* Light border around plans */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside each plan */
+    margin: 20px; /* Space around each plan */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effects for pricing plans */
+.pricing-plan:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    border-color: #0079bf; /* Highlight border on hover */
+}
+
+/* Pricing plan heading styling */
+.pricing-plan h2 {
+    font-size: 2em; /* Large font for plan names */
+    margin: 10px 0; /* Space above and below */
+    color: #0079bf; /* Trello blue color for headings */
+}
+
+/* Price styling */
+.pricing-plan p {
+    font-size: 1.5em; /* Larger font for price */
+    color: #0079bf; /* Same blue color for consistency */
+    margin: 10px 0; /* Space above and below price */
+}
+
+/* Button styling */
+.pricing-plan .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0079bf; /* Button color */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.pricing-plan .btn:hover {
+    background-color: #005f8a; /* Darker shade on hover */
+}
+
+/* List styling */
+.pricing-plan ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+.pricing-plan li {
+    margin: 5px 0; /* Space between list items */
+    font-size: 1em; /* Standard font size for list items */
+    color: #444; /* Darker text for list items */
+}
+
+.features-table {
+    width: 100%;
+    border-collapse: collapse; /* Merge borders for cleaner look */
+    margin-top: 20px;
+}
+
+.features-table th,
+.features-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center; /* Center align the text */
+}
+
+.features-table th {
+    background-color: #f9f9f9; /* Header background */
+}
+
+.features-table td {
+    background-color: #fff; /* Default cell background */
+}
+
+.features-table td.true {
+    background-color: #d4edda; /* Green background for true values */
+}
+
+.features-table td.false {
+    background-color: #f8d7da; /* Red background for false values */
+}
+
+/* Additional styling for FAQ section */
+.faq-section {
+    margin-top: 30px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0079bf; /* FAQ title color */
+}
+
+.faq-section p {
+    margin: 10px 0;
+    color: #555; /* FAQ text color */
+}

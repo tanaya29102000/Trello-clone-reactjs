@@ -71,3 +71,11 @@
   font-size: 14px; /* Font size */
   border-top: 1px solid #eaeaea; /* Top border to separate from navbar */
 }
+.dropdown-content {
+  background-color: #fff; /* White background for the dropdown */
+  border: 1px solid #ccc; /* Light border */
+  padding: 10px; /* Some padding */
+  position: absolute; /* Position it below the link */
+  z-index: 1; /* Ensure it appears on top */
+  /* Add more styles as needed */
+}
