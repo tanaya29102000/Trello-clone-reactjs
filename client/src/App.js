@@ -12,8 +12,8 @@ import HeroSection from './components/HeroSection';
 import Board from './assets/Board';
 import Header from './assets/Header';
 import TemplateGallery from './assets/TemplateGallery';
-import JiraSection from './assets/JiraSection';
-import Content from './assets/Content';
+import List from './assets/List';
+import Card from './assets/Card';
 import Pricing from './components/Pricing';
 function App() {
   return (
@@ -27,12 +27,14 @@ function App() {
         <Route path="/resources" element={<Resources />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/board" element={<Board />} />
+        {/* <Route path="/board" element={<Board />} /> */}
+        <Route path="/board/new" element={<Board />} />
+
         <Route path="/header" element={<Header />} />
         <Route path="/templategallery" element={<TemplateGallery />} />
-        <Route path="/jirasection" element={<JiraSection />} />
+        <Route path="/list" element={<List />} />
         <Route path="/herosection" element={<HeroSection />} />
-        <Route path="/content" element={<Content />} />
+        <Route path="/card" element={<Card />} />
         <Route path="/pricing" element={<Pricing />} />
 
 

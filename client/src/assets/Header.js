@@ -1,54 +1,53 @@
+
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { FaTh, FaPlus, FaBell, FaQuestionCircle } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 
 // Sidebar Component
 const Sidebar = () => (
   <aside className="sidebar">
     <div className="sidebar-header">Boards</div>
     <div className="sidebar-content">
-     <ul class="sidebar-menu">
+      <ul className="sidebar-menu">
         <li>
-            <img src="/images/img.png" alt="Boards"/>
-            <span>Boards</span>
+          <img src="/images/img.png" alt="Boards" />
+          <span>Boards</span>
         </li>
         <li>
-            <img src="/images/template.png" alt="template"/>
-            <span>Templates</span>
+          <img src="/images/template.png" alt="Template" />
+          <span>Templates</span>
         </li>
         <li>
-            <img src="/images/home.png" alt="home"/>
-            <span>Home</span>
+          <img src="/images/home.png" alt="Home" />
+          <span>Home</span>
         </li>
-     </ul>
+      </ul>
 
       <div className="workspace-logo">T</div>
       <h3>Trello Workspace</h3>
-      <ul class="sidebar-menu">
-  <li>
-    <img src="/images/img.png" alt="Boards" />
-    <span>Boards</span>
-  </li>
-  <li>
-    <img src="/images/heart.png" alt="Highlights" />
-    <span>Highlights</span>
-  </li>
-  <li>
-    <img src="/images/views.png" alt="Views" />
-    <span>Views</span>
-  </li>
-  <li>
-    <img src="/images/members.png" alt="Members" />
-    <span>Members</span>
-  </li>
-  <li>
-    <img src="/images/setting.png" alt="Settings" />
-    <span>Settings</span>
-  </li>
-</ul>
-
-
+      <ul className="sidebar-menu">
+        <li>
+          <img src="/images/img.png" alt="Boards" />
+          <span>Boards</span>
+        </li>
+        <li>
+          <img src="/images/heart.png" alt="Highlights" />
+          <span>Highlights</span>
+        </li>
+        <li>
+          <img src="/images/views.png" alt="Views" />
+          <span>Views</span>
+        </li>
+        <li>
+          <img src="/images/members.png" alt="Members" />
+          <span>Members</span>
+        </li>
+        <li>
+          <img src="/images/setting.png" alt="Settings" />
+          <span>Settings</span>
+        </li>
+      </ul>
 
       <div className="premium">
         <p>
@@ -67,10 +66,10 @@ const AccountSidebar = ({ changeTheme }) => (
     <h3>Account</h3>
     <p>TANAYA KANERKAR</p>
     <p>tanayakanerkar@gmail.com</p>
-    <a>Switch accounts</a>
+    <a href="#switch-accounts">Switch accounts</a>
     <br />
     <br />
-    <a>Manage account</a>
+    <a href="#manage-account">Manage account</a>
     <hr />
     <h4>Trello</h4>
     <ul>
@@ -80,13 +79,13 @@ const AccountSidebar = ({ changeTheme }) => (
       <li>Settings</li>
     </ul>
     <hr />
-    <a>Create Workspace</a>
+    <a href="#create-workspace">Create Workspace</a>
     <br />
     <hr />
-    <a>Help</a>
+    <a href="#help">Help</a>
     <br />
     <br />
-    <a>Shortcuts</a>
+    <a href="#shortcuts">Shortcuts</a>
     <hr />
     <h4>Theme</h4>
     <ul>
@@ -104,11 +103,20 @@ const Header = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isAccountSidebarOpen, setAccountSidebarOpen] = useState(false);
   const [selectedBoard, setSelectedBoard] = useState(null);
+  const navigate = useNavigate();
 
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
   const toggleAccountSidebar = () => setAccountSidebarOpen(!isAccountSidebarOpen);
 
-  const handleBoardClick = (boardName) => setSelectedBoard(boardName);
+  const handleBoardClick = (boardName) => {
+    setSelectedBoard(boardName);
+    // Navigate to the selected board page if needed
+    if (boardName === "Create New Board") {
+      navigate("/board/new"); // Navigate to the new board creation page
+    } else {
+      navigate(`/board/${boardName}`); // For other boards
+    }
+  };
 
   // Theme change handler
   const changeTheme = (theme) => {
@@ -140,12 +148,12 @@ const Header = () => {
           </nav>
         </div>
         <div className="header-right">
-          <button className="add-button">
+          <button className="add-button" title="Add new" onClick={() => handleBoardClick("Create New Board")}>
             <FaPlus />
           </button>
           <input type="text" className="search-input" placeholder="Search" />
-          <FaBell className="icon" />
-          <FaQuestionCircle className="icon" />
+          <FaBell className="icon" title="Notifications" />
+          <FaQuestionCircle className="icon" title="Help" />
           <div className="profile-icon" onClick={toggleAccountSidebar}>
             TK
           </div>
@@ -190,14 +198,10 @@ const Header = () => {
               <div className="card" onClick={() => handleBoardClick("My Trello Board")}>
                 My Trello Board
               </div>
-              <div className="card">Create new Board</div>
-            </div>
-
-            {selectedBoard && (
-              <div className="selected-board">
-                <h5>Selected Board: {selectedBoard}</h5>
+              <div className="card" onClick={() => handleBoardClick("Create New Board")}>
+                Create new Board
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
