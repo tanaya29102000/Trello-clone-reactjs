@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import "./HeroSection.css";
+import { useNavigate } from 'react-router-dom';
+
 
 const HeroSection = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [activeTaskImage, setActiveTaskImage] = useState(null);
   const [activeTask, setActiveTask] = useState('');
+  const navigate = useNavigate();
 
-
+  const handleSignup = () => {
+    navigate('/login'); // Navigate to Login page
+  };
   const visibleCardsCount = 3; // Number of visible cards
 
   const handleImageChange = (taskType) => {
@@ -46,7 +51,10 @@ const HeroSection = () => {
           <p>Keep everything in the same place—even if your team isn’t.</p>
           <div className="form-container">
             <input type="email" placeholder="Email" />
-            <button className="signup-btn">Sign up – it’s free!</button>
+            {/* <button className="signup-btn">Sign up – it’s free!</button> */}
+            <button className="signup-btn" onClick={handleSignup}>
+            Sign up – it’s free!
+          </button>
           </div>
           <a href="#watch-video" className="watch-video-link">
             Watch video <span>▶</span>
