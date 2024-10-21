@@ -278,7 +278,8 @@ const HeroSection = () => {
           <img src="/images/frender.png" alt="Fender" />
         </div>
       </div>
-<footer className="footer">
+      {/* <img class="last-image" src="/images/last.png" alt="last img"/> */}
+      <footer className="footer">
   <div className="footer-content">
     <div className="footer-section">
       <h4>About Trello</h4>
