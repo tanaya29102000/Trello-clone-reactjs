@@ -141,7 +141,7 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
-      <div class="horizontal-content">
+      <div className="horizontal-content">
   <p>
     No need to start from scratch. Jump-start your workflow with a proven 
     playbook designed for different teams. Customize it to make it yours.
@@ -202,25 +202,25 @@ const HeroSection = () => {
     </section>
 
       <section class="features-row">
-  <div class="feature-item">
+  <div className="feature-item">
     <img src="/images/Integration.png" alt="Integrations Image" />
     <p>
       <strong>Integrations</strong><br />
       Connect the apps your team already uses into your Trello workflow or add a Power-Up to fine-tune your specific needs.
     </p>
-    <button class="btn1">Browse Integrations</button>
+    <button className="btn1">Browse Integrations</button>
   </div>
 
-  <div class="feature-item">
+  <div className="feature-item">
     <img src="/images/ButlerAutomation.png" alt="Automation Image" />
     <p>
       <strong>Butler Automation</strong><br />
       No-code automation is built into every Trello board. Focus on the work that matters most and let the robots do the rest.
     </p>
-    <button class="btn1">Get to know Automation</button>
+    <button className="btn1">Get to know Automation</button>
   </div>
 
-  <div class="feature-item">
+  <div className="feature-item">
     <img src="/images/TrelloEnterprisee.png" alt="Enterprise Image" />
     <p>
       <strong>Trello Enterprise</strong><br />
@@ -270,21 +270,21 @@ const HeroSection = () => {
           <img src="/images/frender.png" alt="Fender" />
         </div>
       </div>
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-section">
+<footer className="footer">
+  <div className="footer-content">
+    <div className="footer-section">
       <h4>About Trello</h4>
       <p>What’s behind the boards.</p>
     </div>
-    <div class="footer-section">
+    <div className="footer-section">
       <h4>Jobs</h4>
       <p>Learn about open roles on the Trello team.</p>
     </div>
-    <div class="footer-section">
+    <div className="footer-section">
       <h4>Apps</h4>
       <p>Download the Trello App for your Desktop or Mobile devices.</p>
     </div>
-    <div class="footer-section">
+    <div className="footer-section">
       <h4>Contact us</h4>
       <p>Need anything? Get in touch and we can help.</p>
     </div>
